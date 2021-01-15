@@ -304,15 +304,15 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonsumaActionPerformed
 
     private void botonrestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonrestaActionPerformed
-       resultado.setText("-");
+       operacionPulsada("-");
     }//GEN-LAST:event_botonrestaActionPerformed
 
     private void botonmultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonmultiplicacionActionPerformed
-        resultado.setText("*");
+       operacionPulsada("*");
     }//GEN-LAST:event_botonmultiplicacionActionPerformed
 
     private void botondivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botondivisionActionPerformed
-        resultado.setText("/");
+        operacionPulsada("/");
     }//GEN-LAST:event_botondivisionActionPerformed
 
     private void botonigualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonigualActionPerformed
@@ -322,6 +322,15 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         double operando2 = Double.valueOf(resultado.getText());
         if (operacion.equals("+")){
             operando1 = operando1+operando2;
+        }
+         if (operacion.equals("-")){
+            operando1 = operando1-operando2;
+        }
+          if (operacion.equals("*")){
+            operando1 = operando1*operando2;
+        }
+           if (operacion.equals("/")){
+            operando1 = operando1/operando2;
         }
         resultado.setText(String.valueOf(operando1));
       

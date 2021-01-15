@@ -27,6 +27,18 @@ public class VentanaCalculadora extends javax.swing.JFrame {
        resultado.setText(resultado.getText()+numero);
    }
     }
+    //funcion de operaciones
+    public void operacionPulsada(String _operacion){
+        //guardo el valor de la pantalala
+        operando1 = Double.valueOf(resultado.getText());
+        
+        //poner a 0 la pantalla
+        resultado.setText("0");
+        //guado  la operacion que he pulsado
+        operacion =_operacion;
+        
+    }
+    
 
 
     
@@ -240,50 +252,50 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
-       resultado.setText("4");
+       escribeNumero("4");
     }//GEN-LAST:event_boton4ActionPerformed
 
     private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
        
-        resultado.setText("1");
+        escribeNumero("1");
     }//GEN-LAST:event_boton1ActionPerformed
 
     private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
         // TODO add your handling code here:
-        resultado.setText("2");
+        escribeNumero("2");
     }//GEN-LAST:event_boton2ActionPerformed
 
     private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
         // TODO add your handling code here:
-        resultado.setText("3");
+        escribeNumero("3");
     }//GEN-LAST:event_boton3ActionPerformed
 
     private void boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton5ActionPerformed
-       resultado.setText("5");
+      escribeNumero("5");
     }//GEN-LAST:event_boton5ActionPerformed
 
     private void boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton6ActionPerformed
-       resultado.setText("6");
+       escribeNumero("6");
     }//GEN-LAST:event_boton6ActionPerformed
 
     private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
-        resultado.setText("7");
+       escribeNumero("7");
     }//GEN-LAST:event_boton7ActionPerformed
 
     private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
-        resultado.setText("8");
+       escribeNumero("8");
     }//GEN-LAST:event_boton8ActionPerformed
 
     private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
-       resultado.setText("9");
+       escribeNumero("9");
     }//GEN-LAST:event_boton9ActionPerformed
 
     private void boton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton0ActionPerformed
-       resultado.setText("0");
+       escribeNumero("0");
     }//GEN-LAST:event_boton0ActionPerformed
 
     private void botonsumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonsumaActionPerformed
-       resultado.setText("+");
+       operacionPulsada("+");
     }//GEN-LAST:event_botonsumaActionPerformed
 
     private void botonrestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonrestaActionPerformed

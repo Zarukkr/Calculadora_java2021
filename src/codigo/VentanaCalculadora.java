@@ -177,6 +177,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         botonigual.setText("=");
+        botonigual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonigualActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -309,6 +314,18 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private void botondivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botondivisionActionPerformed
         resultado.setText("/");
     }//GEN-LAST:event_botondivisionActionPerformed
+
+    private void botonigualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonigualActionPerformed
+      //primero guardo lo que hay en la panatlla
+        
+        
+        double operando2 = Double.valueOf(resultado.getText());
+        if (operacion.equals("+")){
+            operando1 = operando1+operando2;
+        }
+        resultado.setText(String.valueOf(operando1));
+      
+    }//GEN-LAST:event_botonigualActionPerformed
 
     /**
      * @param args the command line arguments
